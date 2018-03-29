@@ -5,11 +5,11 @@ var computerChoice = ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', 'a', 's'
 
     document.onkeyup = function(event) {
       
-      var userGuess = event.key;
+      var userGuess = event.key.toLowerCase();
 
       var computerGuess = computerChoice[Math.floor(Math.random() * computerChoice.length)];
       
-      if ((userGuess === 'q') || (userGuess === 'w') || (userGuess === 'e') || (userGuess === 'r') || (userGuess === 't') || (userGuess === 'y') || (userGuess === 'u') || (userGuess === 'i') || (userGuess === 'o') || (userGuess === 'p') || (userGuess === 'a') || (userGuess === 's') || (userGuess === 'd') || (userGuess === 'f') || (userGuess === 'g') || (userGuess === 'h') || (userGuess === 'j') || (userGuess === 'k') || (userGuess === 'l') || (userGuess === 'z') || (userGuess === 'x') || (userGuess === 'c') || (userGuess === 'v') || (userGuess === 'b') || (userGuess === 'n') || (userGuess === 'm')) {
+      if (computerChoice.includes(userGuess)) {
         if ((userGuess === computerGuess)) {
           wins++;
         }
